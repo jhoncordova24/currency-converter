@@ -97,7 +97,7 @@ const ConverterForm = () => {
       </button>
       <p className="exchange-rate-result">
         {}
-        {isLoading ? "Getting exchange rate..." : result}
+        {isLoading ? "Obteniendo tipo de cambio..." : result}
       </p>
     </form>
   );
