@@ -24,13 +24,13 @@ const ConverterForm = () => {
 
     try {
       const response = await fetch(API_URL);
-      if (!response.ok) throw Error("Something went wrong!");
+      if (!response.ok) throw Error("Algo salió mal!");
 
       const data = await response.json();
       const rate = (data.conversion_rate * amount).toFixed(2);
       setResult(`${amount} ${fromCurrency} = ${rate} ${toCurrency}`);
     } catch (error) {
-      setResult("Something went wrong!");
+      setResult("Algo salió mal!");
     } finally {
       setIsLoading(false);
     }
